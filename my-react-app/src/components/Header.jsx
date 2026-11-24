@@ -1,4 +1,4 @@
-function Header() {
+function Header({ theme, onToggleTheme }) {
   return (
     <header className="py-8 px-6 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 shadow-sm rounded-b-2xl mb-8 text-center">
       <h1 className="text-3xl md:text-4xl font-bold text-slate-800 dark:text-slate-100 tracking-tight mb-2">
@@ -36,6 +36,13 @@ function Header() {
           LinkedIn
         </a>
       </div>
+      <button
+        type="button"
+        onClick={onToggleTheme}
+        className="mt-4 px-4 py-2 rounded-full border border-slate-300 dark:border-slate-600 text-sm hover:bg-slate-100 dark:hover:bg-slate-800 cursor-pointer"
+      >
+        {theme === 'light' ? '🌙 Темна тема' : '☀️ Світла тема'}
+      </button>
     </header>
   );
 }
