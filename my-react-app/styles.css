@@ -220,3 +220,45 @@ footer ul {
 footer li {
     word-break: break-all;      
 }
+/* ЛР5: оновлений вигляд сайту */
+:root {
+    --bg: #eef1f6;
+    --accent: #4f46e5;
+}
+
+body.dark {
+    --accent: #818cf8;
+}
+
+.container {
+    border-top: 4px solid var(--accent);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+}
+
+header h1 {
+    color: var(--accent);
+    letter-spacing: 0.5px;
+}
+
+section h2 {
+    border-bottom-color: var(--accent);
+}
+
+a {
+    color: var(--accent);
+}
+
+#theme-toggle:hover {
+    background: var(--accent);
+    color: #ffffff;
+}
+
+.review-card {
+    border-left: 3px solid var(--accent);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.review-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
